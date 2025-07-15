@@ -72,7 +72,8 @@ function App() {
       const resumeText = await extractText(resumeFile);
       // You can use a real user ID or email if available
       const student_id = 'frontend-demo-' + Math.random().toString(36).slice(2, 10);
-      const response = await fetch('/score', {
+      const apiUrl = "https://resume-scorer-turtil-deploy.onrender.com";
+      const response = await fetch(`${apiUrl}/score`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
