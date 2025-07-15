@@ -8,6 +8,7 @@ from datetime import datetime ,timezone
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.exception_handlers import request_validation_exception_handler
 from starlette.requests import Request
@@ -18,18 +19,7 @@ from typing import Union, List
 from .scorer import ResumeScorer
 
 
-origins = [
-    "https://resume-scorer-turtil-deploy-1.onrender.com",  # your React frontend
-    "http://localhost:3000"  # for local dev
-]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,  # ✅ allow your frontend
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -156,6 +146,18 @@ app = FastAPI(
     description="Evaluates resumes against job goals and provides skill-based insights",
     version="1.0.0",
     lifespan=lifespan  # ← this replaces on_event("startup")
+)
+origins = [
+    "https://resume-scorer-turtil-deploy-1.onrender.com",  # your React frontend
+    "http://localhost:3000"  # for local dev
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # ✅ allow your frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Error handler for internal exceptions
