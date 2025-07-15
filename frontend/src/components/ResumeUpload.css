@@ -1,0 +1,24 @@
+.resume-upload {
+  margin: 2rem auto 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+.upload-area {
+  background: rgba(255,255,255,0.25);
+  border: 2px dashed #4f8cff;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 16px rgba(79,140,255,0.08);
+}
+.upload-area:hover {
+  background: rgba(79,140,255,0.08);
+  border-color: #222;
+}
+.upload-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+} 

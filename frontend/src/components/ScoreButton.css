@@ -1,0 +1,23 @@
+.score-btn {
+  margin: 1.5rem auto 0 auto;
+  display: block;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #4f8cff 0%, #6a82fb 100%);
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.12);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.score-btn:disabled {
+  background: #b3cfff;
+  color: #eee;
+  cursor: not-allowed;
+}
+.score-btn:not(:disabled):hover {
+  background: linear-gradient(90deg, #6a82fb 0%, #4f8cff 100%);
+  transform: translateY(-2px) scale(1.03);
+} 

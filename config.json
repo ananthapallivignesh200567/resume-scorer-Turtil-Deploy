@@ -1,0 +1,71 @@
+{
+    "version": "1.0.0",
+    "minimum_score_to_pass": 0.65,
+    "log_score_details": true,
+    "model_goals_supported": [
+      "Amazon SDE", 
+      "ML Internship",
+      "Adobe SDE", 
+      "AI Researcher", 
+      "AIML Research Intern",
+      "Apple SDE",
+      "Applied Scientist",
+      "Backend Engineer",
+      "Data Engineer",
+      "Flipkart SDE",
+      "Frontend Engineer",
+      "Game Developer",
+      "Google SDE",
+      "LinkedIn SDE",
+      "MachineLearning Engineer",
+      "Meta SDE",
+      "Microsoft SDE",
+      "ML Internship",
+      "Netflix SDE",
+      "Platform Engineer",
+      "Product Manager",
+      "Salesforce SDE",
+      "Software Engineer",
+      "Site Reliability Engineer",
+      "Tesla SDE",
+      "Twitter SDE",
+      "Uber SDE",
+      "UIUX Designer",
+      "Zomato SDE"
+    ],
+    "default_goal_model": "Amazon SDE",
+    "skill_matching": {
+      "case_sensitive": false,
+      "exact_match_only": true,
+      "partial_match_threshold": 0.8
+    },
+    "performance": {
+      "max_response_time_ms": 1500,
+      "max_memory_usage_mb": 256
+    },
+    "logging": {
+      "level": "INFO",
+      "file_rotation": true,
+      "max_log_files": 5,
+      "max_log_file_size_mb": 10
+    },
+    "api": {
+      "port": 8000,
+      "host": "0.0.0.0",
+      "workers": 4,
+      "timeout_seconds": 30,
+      "rate_limit": {
+        "requests_per_minute": 60,
+        "enabled": false
+      }
+    },
+    "analytics": {
+      "collect_usage_metrics": true,
+      "anonymize_student_data": true,
+      "store_request_history": false
+    },
+    "notification": {
+      "alert_on_error": true,
+      "alert_threshold_score": 0.3
+    }
+  }

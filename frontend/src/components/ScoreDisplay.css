@@ -1,0 +1,14 @@
+.score-display {
+  margin: 2rem auto 1rem auto;
+  text-align: center;
+}
+.score-display svg {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+.score-label {
+  font-size: 1.2rem;
+  color: #4f8cff;
+  font-weight: 600;
+  margin-top: 0.5rem;
+} 

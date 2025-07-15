@@ -1,0 +1,42 @@
+.skill-recommendations {
+  margin: 2rem auto 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.skill-section {
+  min-width: 200px;
+}
+.skill-section h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-chip {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(79,140,255,0.08);
+  color: #222;
+  box-shadow: 0 1px 4px rgba(79,140,255,0.06);
+}
+.skill-chip.recommended {
+  background: #fffbe6;
+  color: #bfa100;
+}
+.skill-chip.matched {
+  background: #e6fff2;
+  color: #1a7f37;
+}
+.skill-chip.missing {
+  background: #fff0f0;
+  color: #d32f2f;
+} 
