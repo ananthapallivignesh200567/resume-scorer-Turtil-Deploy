@@ -17,6 +17,19 @@ from typing import Union, List
 
 from .scorer import ResumeScorer
 
+
+origins = [
+    "https://resume-scorer-turtil-deploy-1.onrender.com",  # your React frontend
+    "http://localhost:3000"  # for local dev
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # ✅ allow your frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
